@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/overallDebtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overall, you owe PKR6,423.00"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/filterIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/overallDebtText" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/photographyTripCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterIcon"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/photographyTripIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_plane"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/photographyTripTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photography Trip"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintStart_toEndOf="@id/photographyTripIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/photographyTripDebt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You owe PKR6,423.00"
+            android:textColor="@android:color/holo_orange_light"
+            android:layout_marginStart="28dp"
+            app:layout_constraintStart_toEndOf="@id/photographyTripIcon"
+            app:layout_constraintTop_toBottomOf="@id/photographyTripTitle" />
+
+        <TextView
+            android:id="@+id/photographyTripPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You owe John Doe PKR6,423.00"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintStart_toEndOf="@id/photographyTripIcon"
+            app:layout_constraintTop_toBottomOf="@id/photographyTripDebt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nonGroupCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photographyTripCard"
+        android:padding="15dp">
+        <ImageView
+            android:id="@+id/nonGroupIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_non_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/nonGroupTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non-group expenses"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintStart_toEndOf="@id/nonGroupIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nonGroupExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No expenses"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintStart_toEndOf="@id/nonGroupIcon"
+            app:layout_constraintTop_toBottomOf="@id/nonGroupTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/startNewGroupButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start a new group"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/green"
+        android:drawableLeft="@drawable/ic_multi_people"
+        android:background="@drawable/button_outline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nonGroupCard" />
+</androidx.constraintlayout.widget.ConstraintLayout>
