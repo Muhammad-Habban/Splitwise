@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_groups"
+        android:icon="@drawable/ic_multi_people"
+        android:title="Groups" />
+    <item
+        android:id="@+id/nav_friends"
+        android:icon="@drawable/ic_single_person"
+        android:title="Friends" />
+    <item
+        android:id="@+id/nav_activity"
+        android:icon="@drawable/ic_stat_chart"
+        android:title="Activity" />
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/ic_user"
+        android:title="Account" />
+</menu>
