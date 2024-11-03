@@ -27,6 +27,12 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
+        <activity android:name=".AddExpenseActivity" />
+        <activity android:name=".NewGroupActivity" />
+        <activity android:name=".SettleupActivity" />
+        <activity android:name=".BalanceActivity" />
+        <activity android:name=".TotalsActivity" />
+        <activity android:name=".WhiteboardActivity" />
 
     </application>
 

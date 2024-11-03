@@ -1,9 +1,11 @@
 package com.example.splitwise
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +38,13 @@ class HomeActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
+        val sharedButton : FloatingActionButton = findViewById(R.id.sharedButton)
+        sharedButton.setOnClickListener{
+            val intent = Intent(this, AddExpenseActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     // Helper function to load fragments

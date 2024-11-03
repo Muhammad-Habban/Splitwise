@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/crossButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:id="@+id/selectBalanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:text="Totals"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/crossButton"
+        app:layout_constraintStart_toEndOf="@id/crossButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/totalGroupSpendingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Group Spending"
+        android:textSize="14sp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectBalanceText" />
+
+    <TextView
+        android:id="@+id/totalGroupSpendingAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PKR 6000"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalGroupSpendingLabel" />
+
+    <TextView
+        android:id="@+id/totalPaidForLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total You Paid For"
+        android:layout_marginStart="18dp"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalGroupSpendingAmount" />
+
+    <TextView
+        android:id="@+id/totalPaidForAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PKR 5500"
+        android:layout_marginStart="18dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalPaidForLabel" />
+
+    <TextView
+        android:id="@+id/totalShareLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Total Share"
+        android:layout_marginStart="18dp"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalPaidForAmount" />
+
+    <TextView
+        android:id="@+id/totalShareAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PKR 500"
+        android:layout_marginStart="18dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalShareLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
