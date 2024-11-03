@@ -1,4 +1,3 @@
-
 # Splitwise Clone - Android Application
 
 ## Project Overview
@@ -21,6 +20,7 @@ The app now includes the following screens:
 - **Add New Group Screen**: Allows users to create a new group for shared expenses.
 - **Add Expense Screen**: Enables adding a new expense within a group or with a friend.
 - **Group Detail Screen**: Provides details for a specific group, including members and transactions.
+
 
 ## Setup Instructions
 
