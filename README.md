@@ -2,17 +2,25 @@
 
 ## Project Overview
 
-This project is a clone of the Splitwise app, designed as an Android application using Kotlin and Android Studio. The aim is to replicate the key screens and user flow of Splitwise, providing a basic UI for users to sign up, log in, and access the main screen. Currently, the project focuses on the UI design, with future development planned for navigation, user authentication, and database functionality for managing user data and expenses.
+This project is a clone of the Splitwise app, designed as an Android application using Kotlin and Android Studio. The aim is to replicate the key screens and user flow of Splitwise, providing a UI for users to sign up, log in, and access the main screen, along with additional features for managing expenses and balances. Currently, the project focuses on the UI design, with plans for implementing navigation, user authentication, and database functionality to manage user data and expenses.
 
-The app currently includes several key screens:
+The app now includes the following screens:
 
 - **Main Screen**: The landing page where users can sign up, log in, or sign in with Google.
-- **Sign-Up Screen**: A simple form for entering the user's full name.
-- **Login Screen**: A login form that captures a user's password.
-- **Groups Screen**: Displays the user's groups and shared expenses.
-- **Friends Screen**: Shows a list of the user's friends within the app.
-- **Activity Screen**: Displays the user's recent activities and transactions.
+- **Sign-Up Screen**: A form to enter the user's full name.
+- **Login Screen**: A login form that captures a user’s password.
+- **Groups Screen**: Displays user groups and shared expenses.
+- **Friends Screen**: Shows a list of the user’s friends within the app.
+- **Activity Screen**: Displays the user’s recent activities and transactions.
 - **Account Screen**: Provides user account details and settings options.
+- **Totals Screen**: Displays the total expenses and balances across all groups.
+- **Settle Up Screen**: Allows users to settle debts with friends or within groups.
+- **Balances Screen**: Shows detailed balances for each friend or group.
+- **Whiteboard Screen**: Provides an open text area for note-taking.
+- **Add New Group Screen**: Allows users to create a new group for shared expenses.
+- **Add Expense Screen**: Enables adding a new expense within a group or with a friend.
+- **Group Detail Screen**: Provides details for a specific group, including members and transactions.
+
 
 ## Setup Instructions
 
@@ -41,82 +49,93 @@ To get started with this project, follow these steps:
 
 ### 1. Main Screen
 
-- **Purpose**: The main entry point of the app. Users are presented with three main options:
-  - **Sign Up**: Directs the user to the sign-up page.
-  - **Log In**: Navigates to the login page.
-  - **Sign in with Google**: This option will allow Google authentication in future implementations.
-- **UI Elements**: Includes the Splitwise logo, a "Sign Up" button, a "Log In" button, and a "Sign in with Google" button. There are also links to **Terms**, **Privacy Policy**, and **Contact us**.
+- **Purpose**: The main entry point of the app, presenting users with options to sign up, log in, or sign in with Google.
+- **UI Elements**: Includes buttons for Sign Up, Log In, and Google Sign-In, as well as links to Terms, Privacy Policy, and Contact Us.
 
 ### 2. Sign-Up Screen
 
-- **Purpose**: Allows users to input their full name as the first step in the sign-up process. In the future, this will be connected to a backend system to store user information.
-- **UI Elements**:
-  - An input field for the user's full name.
-  - Two buttons:
-    - **Back**: Returns the user to the main screen.
-    - **Done**: Submits the name and proceeds (future functionality will be added).
+- **Purpose**: Allows users to input their full name as the first step in the sign-up process.
+- **UI Elements**: Input field for the full name, Back button, and Done button.
 
 ### 3. Login Screen
 
-- **Purpose**: Provides a simple login form for returning users to enter their credentials. Currently, this screen only captures the password.
-- **UI Elements**:
-  - An input field for the password.
-  - Two buttons:
-    - **Back**: Returns the user to the main screen.
-    - **Done**: Processes the login (future functionality will handle authentication).
+- **Purpose**: Provides a simple login form for returning users.
+- **UI Elements**: Password input field, Back button, and Done button.
 
-### 4. Groups Screen (New)
+### 4. Groups Screen
 
-- **Purpose**: Displays the groups that the user is part of, along with a summary of debts and shared expenses.
-- **UI Elements**:
-  - Group cards showing group names, overall group debt, and details of group members.
+- **Purpose**: Displays the user's groups and associated expenses.
+- **UI Elements**: Group cards with group names, debt summaries, and member details.
 
-### 5. Friends Screen (New)
+### 5. Friends Screen
 
-- **Purpose**: Displays the user's friends list, allowing them to manage friends, view individual debts, and invite new friends to the app.
-- **UI Elements**:
-  - A list of friends, with the ability to manage connections and track shared expenses.
+- **Purpose**: Displays a list of friends, allowing users to manage connections and track shared expenses.
+- **UI Elements**: Friends list with connections and balance details.
 
-### 6. Activity Screen (New)
+### 6. Activity Screen
 
-- **Purpose**: Shows recent activities, transactions, and interactions between the user and other members (friends/groups). Users can review their payment history and settlements.
-- **UI Elements**:
-  - Recent transaction lists and settlement details.
+- **Purpose**: Shows recent activity and transaction history between the user and other members.
+- **UI Elements**: List of recent transactions and settlements.
 
-### 7. Account Screen (New)
+### 7. Account Screen
 
-- **Purpose**: Provides user details and settings. The user can manage account information, email settings, notification settings, and security preferences from this screen.
-- **UI Elements**:
-  - Profile picture, name, and email.
-  - Preferences such as email and push notifications settings.
-  - Log out button.
+- **Purpose**: Provides user account details and settings.
+- **UI Elements**: Profile picture, name, email, preferences for notifications, email settings, and a Log Out button.
 
-### Navigation (New)
+### 8. Totals Screen (New)
 
-- **Purpose**: A Bottom Navigation Bar has been added to facilitate navigation between the **Groups**, **Friends**, **Activity**, and **Account** screens.
-- **UI Elements**:
-  - A **Bottom Navigation Bar** with icons representing each screen.
+- **Purpose**: Displays total expenses and balances for all groups.
+- **UI Elements**: Summary of expenses and contributions across all groups.
+
+### 9. Settle Up Screen (New)
+
+- **Purpose**: Enables users to settle outstanding debts within groups or with friends.
+- **UI Elements**: Interface to choose settlement options, select friends, and settle debts.
+
+### 10. Balances Screen (New)
+
+- **Purpose**: Shows detailed balances owed or owing for each friend or group.
+- **UI Elements**: List of individual balances for easy tracking.
+
+### 11. Whiteboard Screen (New)
+
+- **Purpose**: Provides an open text area for note-taking, mimicking a whiteboard experience.
+- **UI Elements**: A full-screen `EditText` for jotting down notes or reminders.
+
+### 12. Add New Group Screen (New)
+
+- **Purpose**: Allows users to create a new group for tracking shared expenses.
+- **UI Elements**: Input fields for group name, members, and creation options.
+
+### 13. Add Expense Screen (New)
+
+- **Purpose**: Allows users to add new expenses within a group or with friends.
+- **UI Elements**: Expense details form with options for amount, description, and sharing method.
+
+### 14. Group Detail Screen (New)
+
+- **Purpose**: Provides a detailed view of a group, including members, expenses, and balances.
+- **UI Elements**: Group information, members list, and transaction history.
 
 ## Technical Challenges and Future Plans
 
 ### Technical Challenges
 
-- **UI Styling**: Ensuring that the app design is responsive across various screen sizes posed a challenge. Using ConstraintLayout was essential for maintaining a flexible and responsive design.
-- **Touch Target Size**: Meeting the minimum touch target size (48dp) for buttons and input fields was a challenge. Android Studio flags elements that are too small, which required adjustments to padding and sizing.
-- **Custom Styling**: Applying custom styling for specific UI components, such as buttons with only a bottom border and specific color schemes, was handled through XML drawables, which added complexity.
-- **Fragment Management**: Ensuring smooth transitions between the fragments (Groups, Friends, Activity, Account) using the Bottom Navigation Bar required careful management of the fragment lifecycle.
-- **Navigation Component**: Implementing navigation between different screens while managing the fragment stack was challenging, especially keeping the state of fragments intact during transitions.
+- **UI Styling**: Ensuring responsive design across screen sizes using `ConstraintLayout`.
+- **Touch Target Size**: Meeting minimum touch target size requirements, which required adjustments to padding and sizing.
+- **Custom Styling**: Applying custom styling, including buttons with borders and specific color schemes.
+- **Fragment and Activity Management**: Managing transitions between fragments and activities, especially in complex navigation flows with subpages.
+- **Data Consistency**: Ensuring that data flows correctly between fragments and activities, maintaining state across subpages.
 
 ### Future Plans
 
-- **User Authentication**: Next, I plan to implement actual user authentication, either with email/password or through Google Sign-In. This will enable users to create accounts and log in securely.
-- **Database Integration**: To store user data and expenses, I plan to integrate a Room database for local storage, or Firebase for cloud-based data storage.
-- **Expense Management**: The ultimate goal is to develop a fully functional app where users can track shared expenses, add debts, and settle them, mimicking the core functionality of Splitwise.
-- **Enhanced Navigation**: Expand the navigation system to handle more complex interactions, such as deep linking and in-app navigation flows.
-- **Settings and Preferences**: Additional user settings such as dark mode, language preferences, and more fine-grained control over notifications.
-- **Improved UI Design**: Further improvements in UI/UX design to match the original Splitwise app, making the app more visually appealing and user-friendly.
-- **Testing and Bug Fixes**: Implement unit testing and UI testing to ensure stability and reliability across devices.
+- **User Authentication**: Implementing secure user authentication, either with email/password or Google Sign-In.
+- **Database Integration**: Storing user data and expenses locally with Room or Firebase for cloud-based storage.
+- **Expense Management**: Developing functionality to track and manage shared expenses, settlements, and balances with friends and groups.
+- **Enhanced Navigation**: Further improve navigation for complex flows and deep linking within the app.
+- **Settings and Preferences**: Adding user preferences such as dark mode, language options, and additional notification settings.
+- **Testing and Bug Fixes**: Conducting unit testing and UI testing to ensure app stability and usability across devices.
 
 ## Conclusion
 
-This project is still in progress, with the UI for seven key screens completed. The next phases will involve adding backend logic, navigation, user authentication, and expense management features. Contributions and suggestions are welcome as the project develops further.
+This project now includes 14 key screens, providing a comprehensive UI for managing shared expenses in a format similar to Splitwise. The next steps involve adding backend functionality, authentication, and data management. Contributions and suggestions are welcome as the project progresses.
