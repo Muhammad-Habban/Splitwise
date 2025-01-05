@@ -2,25 +2,26 @@
 
 ## Project Overview
 
-This project is a clone of the Splitwise app, designed as an Android application using Kotlin and Android Studio. The aim is to replicate the key screens and user flow of Splitwise, providing a UI for users to sign up, log in, and access the main screen, along with additional features for managing expenses and balances. Currently, the project focuses on the UI design, with plans for implementing navigation, user authentication, and database functionality to manage user data and expenses.
+This project is a comprehensive clone of the Splitwise app, designed as an Android application using Kotlin and Android Studio. The application enables users to manage shared expenses, settle balances, and track group transactions effectively. It replicates the essential features of Splitwise while adding custom functionality to enhance the user experience.
 
-The app now includes the following screens:
+The app now includes the following features:
 
-- **Main Screen**: The landing page where users can sign up, log in, or sign in with Google.
-- **Sign-Up Screen**: A form to enter the user's full name.
-- **Login Screen**: A login form that captures a user’s password.
-- **Groups Screen**: Displays user groups and shared expenses.
-- **Friends Screen**: Shows a list of the user’s friends within the app.
-- **Activity Screen**: Displays the user’s recent activities and transactions.
-- **Account Screen**: Provides user account details and settings options.
-- **Totals Screen**: Displays the total expenses and balances across all groups.
-- **Settle Up Screen**: Allows users to settle debts with friends or within groups.
-- **Balances Screen**: Shows detailed balances for each friend or group.
-- **Whiteboard Screen**: Provides an open text area for note-taking.
-- **Add New Group Screen**: Allows users to create a new group for shared expenses.
-- **Add Expense Screen**: Enables adding a new expense within a group or with a friend.
-- **Group Detail Screen**: Provides details for a specific group, including members and transactions.
+- **Group Management**: Create, view, and manage groups, including adding users to groups dynamically.
+- **Expense Tracking**: Add and split expenses among group members with detailed transaction history.
+- **Debt Management**: View balances and settle up with group members.
+- **User-Friendly Navigation**: Intuitive screens for managing groups, friends, and expenses.
 
+---
+
+## New Features Added
+
+- **Add Users to Group**: Dynamically add friends to an existing group, filtering out current group members and the logged-in user.
+- **Expense Splitting**: Automatically split expenses equally among all group members.
+- **Settle Up**: View detailed information about who owes whom in a group and settle debts.
+- **Enhanced Group Detail Screen**: Display group information, members, and a detailed list of expenses with payer information.
+- **Persistent Data Storage**: Use Room Database for local storage and Firebase Authentication for user management.
+
+---
 
 ## Setup Instructions
 
@@ -45,97 +46,82 @@ To get started with this project, follow these steps:
     - Connect an Android device or use the emulator.
     - Click the Run button in Android Studio or press `Shift + F10` to build and launch the app.
 
-## Screens Designed and Their Purpose
+---
 
-### 1. Main Screen
+## Screens and Features
 
-- **Purpose**: The main entry point of the app, presenting users with options to sign up, log in, or sign in with Google.
-- **UI Elements**: Includes buttons for Sign Up, Log In, and Google Sign-In, as well as links to Terms, Privacy Policy, and Contact Us.
+### 1. **Group Management**
 
-### 2. Sign-Up Screen
+- **Group Creation**: Create new groups with a custom name.
+- **Group Details**: View detailed group information, including expenses, balances, and group members.
+- **Add Users**: Dynamically add new users to a group, excluding the current user and existing group members.
 
-- **Purpose**: Allows users to input their full name as the first step in the sign-up process.
-- **UI Elements**: Input field for the full name, Back button, and Done button.
+### 2. **Expense Tracking**
 
-### 3. Login Screen
+- **Add Expense**: Add new expenses to a group, specifying the payer and splitting the cost equally among all group members.
+- **View Expenses**: See detailed information about each expense in the group, including the description, amount, and payer.
 
-- **Purpose**: Provides a simple login form for returning users.
-- **UI Elements**: Password input field, Back button, and Done button.
+### 3. **Debt Management**
 
-### 4. Groups Screen
+- **Settle Up**: View and manage all debts within a group, showing who owes whom and how much.
+- **Balances**: View detailed balances for all group members.
 
-- **Purpose**: Displays the user's groups and associated expenses.
-- **UI Elements**: Group cards with group names, debt summaries, and member details.
+---
 
-### 5. Friends Screen
+## Technical Highlights
 
-- **Purpose**: Displays a list of friends, allowing users to manage connections and track shared expenses.
-- **UI Elements**: Friends list with connections and balance details.
+### 1. **Database Integration**
 
-### 6. Activity Screen
+- **Room Database**: Used for storing users, groups, expenses, and group-user relationships.
+- **Data Entities**:
+  - `User`: Stores user information.
+  - `Group`: Stores group details.
+  - `Expense`: Tracks expenses with descriptions, amounts, and payer details.
+  - `UserExpense`: Tracks how much each user owes for each expense.
 
-- **Purpose**: Shows recent activity and transaction history between the user and other members.
-- **UI Elements**: List of recent transactions and settlements.
+### 2. **User Authentication**
 
-### 7. Account Screen
+- **Firebase Authentication**: Handles secure user authentication.
 
-- **Purpose**: Provides user account details and settings.
-- **UI Elements**: Profile picture, name, email, preferences for notifications, email settings, and a Log Out button.
+### 3. **Dynamic UI Components**
 
-### 8. Totals Screen (New)
+- **Group Cards**: Dynamically display all groups for the current user.
+- **Expense Cards**: Dynamically display all expenses within a group.
+- **Settle Up Cards**: Show detailed debt information for group members.
 
-- **Purpose**: Displays total expenses and balances for all groups.
-- **UI Elements**: Summary of expenses and contributions across all groups.
+### 4. **Error Handling**
 
-### 9. Settle Up Screen (New)
+- Comprehensive error handling for database operations and user interactions.
 
-- **Purpose**: Enables users to settle outstanding debts within groups or with friends.
-- **UI Elements**: Interface to choose settlement options, select friends, and settle debts.
+---
 
-### 10. Balances Screen (New)
+## Technical Challenges and Solutions
 
-- **Purpose**: Shows detailed balances owed or owing for each friend or group.
-- **UI Elements**: List of individual balances for easy tracking.
+### Challenges
 
-### 11. Whiteboard Screen (New)
+1. **Dynamic Filtering**: Filtering users for the "Add Users" feature to exclude the current user and existing group members.
+2. **Expense Splitting**: Calculating and storing each user's share of an expense accurately.
+3. **Efficient Data Queries**: Fetching group-specific data for expenses and user debts efficiently.
 
-- **Purpose**: Provides an open text area for note-taking, mimicking a whiteboard experience.
-- **UI Elements**: A full-screen `EditText` for jotting down notes or reminders.
+### Solutions
 
-### 12. Add New Group Screen (New)
+- Implemented custom queries in Room Database to handle dynamic filtering and data aggregation.
+- Used coroutine-based architecture for efficient data fetching and UI updates.
+- Leveraged Kotlin's data classes for better structure and maintainability.
 
-- **Purpose**: Allows users to create a new group for tracking shared expenses.
-- **UI Elements**: Input fields for group name, members, and creation options.
+---
 
-### 13. Add Expense Screen (New)
+## Future Plans
 
-- **Purpose**: Allows users to add new expenses within a group or with friends.
-- **UI Elements**: Expense details form with options for amount, description, and sharing method.
+- **Enhanced UI/UX**: Add animations and visual improvements for smoother navigation.
+- **Cloud Storage**: Integrate Firebase Firestore for syncing data across devices.
+- **Advanced Reports**: Provide detailed reports of expenses and balances.
+- **Push Notifications**: Notify users about new expenses or settlements in real-time.
 
-### 14. Group Detail Screen (New)
-
-- **Purpose**: Provides a detailed view of a group, including members, expenses, and balances.
-- **UI Elements**: Group information, members list, and transaction history.
-
-## Technical Challenges and Future Plans
-
-### Technical Challenges
-
-- **UI Styling**: Ensuring responsive design across screen sizes using `ConstraintLayout`.
-- **Touch Target Size**: Meeting minimum touch target size requirements, which required adjustments to padding and sizing.
-- **Custom Styling**: Applying custom styling, including buttons with borders and specific color schemes.
-- **Fragment and Activity Management**: Managing transitions between fragments and activities, especially in complex navigation flows with subpages.
-- **Data Consistency**: Ensuring that data flows correctly between fragments and activities, maintaining state across subpages.
-
-### Future Plans
-
-- **User Authentication**: Implementing secure user authentication, either with email/password or Google Sign-In.
-- **Database Integration**: Storing user data and expenses locally with Room or Firebase for cloud-based storage.
-- **Expense Management**: Developing functionality to track and manage shared expenses, settlements, and balances with friends and groups.
-- **Enhanced Navigation**: Further improve navigation for complex flows and deep linking within the app.
-- **Settings and Preferences**: Adding user preferences such as dark mode, language options, and additional notification settings.
-- **Testing and Bug Fixes**: Conducting unit testing and UI testing to ensure app stability and usability across devices.
+---
 
 ## Conclusion
 
-This project now includes 14 key screens, providing a comprehensive UI for managing shared expenses in a format similar to Splitwise. The next steps involve adding backend functionality, authentication, and data management. Contributions and suggestions are welcome as the project progresses.
+This project now includes comprehensive functionality for managing shared expenses, replicating and enhancing the Splitwise experience. Contributions and suggestions are welcome to make the project even better.
+
+---
