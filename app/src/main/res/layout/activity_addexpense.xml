@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Enter a description"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textColorHint="@android:color/darker_gray"
             android:backgroundTint="@color/teal_200"
             android:inputType="text"
@@ -78,10 +78,11 @@
             android:hint="0.00"
             android:inputType="numberDecimal"
             android:maxLines="1"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textColorHint="@android:color/darker_gray" />
     </LinearLayout>
     <TextView
+        android:id="@+id/paidByYou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Paid By You Split Equally"
@@ -90,4 +91,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
+    <Button
+        android:id="@+id/addExpenseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Expense"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paidByYou"
+        android:layout_marginTop="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

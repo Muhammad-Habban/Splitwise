@@ -39,12 +39,6 @@ class HomeActivity : AppCompatActivity() {
             }
         }
 
-        val sharedButton : FloatingActionButton = findViewById(R.id.sharedButton)
-        sharedButton.setOnClickListener{
-            val intent = Intent(this, AddExpenseActivity::class.java)
-            startActivity(intent)
-        }
-
     }
 
     // Helper function to load fragments

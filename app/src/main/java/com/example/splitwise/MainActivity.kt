@@ -14,11 +14,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.splitwise.ui.theme.SplitwiseTheme
 import android.content.Intent
 import android.widget.Button
+//import com.google.firebase.auth.FirebaseAuth
+//import com.google.firebase.FirebaseApp
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+//        FirebaseApp.initializeApp(this)
 
         val signInButton : Button = findViewById<Button>(R.id.btnGoogleSignIn)
         signInButton.setOnClickListener{
